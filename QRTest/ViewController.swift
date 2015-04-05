@@ -9,7 +9,7 @@
 import UIKit
 import CoreImage
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var textField: UITextField!
 

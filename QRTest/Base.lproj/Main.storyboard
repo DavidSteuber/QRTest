@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UITableView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -23,7 +23,7 @@
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="oyd-Xs-CKy"/>
+                                    <constraint firstAttribute="width" constant="200" id="uFj-hE-gky"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type text to be encoded here." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="16w-Aq-JpU">
@@ -37,12 +37,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JOG-yr-ahO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="AdA-5B-a9t"/>
-                            <constraint firstItem="16w-Aq-JpU" firstAttribute="centerX" secondItem="JOG-yr-ahO" secondAttribute="centerX" id="MRx-cA-qcj"/>
-                            <constraint firstItem="16w-Aq-JpU" firstAttribute="top" secondItem="JOG-yr-ahO" secondAttribute="bottom" constant="57" id="WNI-KK-7rq"/>
-                            <constraint firstItem="16w-Aq-JpU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XZZ-Re-gwK"/>
-                            <constraint firstItem="16w-Aq-JpU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kSi-3B-Og2"/>
-                            <constraint firstItem="16w-Aq-JpU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zsc-xb-LyM"/>
+                            <constraint firstItem="JOG-yr-ahO" firstAttribute="centerX" secondItem="16w-Aq-JpU" secondAttribute="centerX" id="1ln-ZK-Hci"/>
+                            <constraint firstItem="16w-Aq-JpU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="d4a-wO-Uir"/>
+                            <constraint firstItem="JOG-yr-ahO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="f69-YH-fb3"/>
+                            <constraint firstItem="16w-Aq-JpU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hIe-Jj-j7L"/>
+                            <constraint firstItem="16w-Aq-JpU" firstAttribute="top" secondItem="JOG-yr-ahO" secondAttribute="bottom" constant="57" id="myN-qe-ODe"/>
+                            <constraint firstItem="16w-Aq-JpU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oKp-Rb-6km"/>
                         </constraints>
                     </view>
                     <connections>
