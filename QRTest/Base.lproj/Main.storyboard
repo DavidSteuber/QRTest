@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,21 +18,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JOG-yr-ahO">
-                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <rect key="frame" x="200" y="28" width="200" height="200"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
+                                </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="v6b-Nt-QXf"/>
+                                    <constraint firstAttribute="width" constant="200" id="oyd-Xs-CKy"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type text to be encoded here." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="16w-Aq-JpU">
+                                <rect key="frame" x="16" y="285" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1qi-k7-sJI"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JOG-yr-ahO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BOW-3c-f3K"/>
-                            <constraint firstItem="JOG-yr-ahO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="egC-4V-yHK"/>
-                            <constraint firstItem="JOG-yr-ahO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="180" id="shF-kX-7yP"/>
+                            <constraint firstItem="JOG-yr-ahO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="AdA-5B-a9t"/>
+                            <constraint firstItem="16w-Aq-JpU" firstAttribute="centerX" secondItem="JOG-yr-ahO" secondAttribute="centerX" id="MRx-cA-qcj"/>
+                            <constraint firstItem="16w-Aq-JpU" firstAttribute="top" secondItem="JOG-yr-ahO" secondAttribute="bottom" constant="57" id="WNI-KK-7rq"/>
+                            <constraint firstItem="16w-Aq-JpU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XZZ-Re-gwK"/>
+                            <constraint firstItem="16w-Aq-JpU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kSi-3B-Og2"/>
+                            <constraint firstItem="16w-Aq-JpU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zsc-xb-LyM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="image" destination="JOG-yr-ahO" id="Z5C-At-EBe"/>
+                        <outlet property="textField" destination="16w-Aq-JpU" id="uFe-k1-qnp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
