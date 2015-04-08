@@ -16,8 +16,9 @@ class ViewController: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if let qrimage = image {
-            qrimage.image = QRCodeImage("https://www.david-steuber.com")
+        if let uiimage = image {
+            var code = UIImage.qrCodeWithMessage("https://www.david-steuber.com")
+            uiimage.image = code?.scaleQRCodeWithNoInterpolation(200)
         }
     }
 
@@ -56,30 +57,11 @@ class ViewController: UITableViewController, UITextFieldDelegate {
         println("textFieldShouldReturn called")
         if let text = textField.text {
             println(text)
-            image.image = QRCodeImage(text)
+            var code = UIImage.qrCodeWithMessage(text)
+            image.image = code?.scaleQRCodeWithNoInterpolation(200)
         }
         textField.resignFirstResponder()
         return true
     }
-
-    // MARK: QRCodeImage is what generates the UIImage from a String
-
-    func QRCodeImage(message: String) -> UIImage? {
-        let data: NSData = message.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!
-        let qrEncoder = CIFilter(name: "CIQRCodeGenerator", withInputParameters: ["inputMessage":data, "inputCorrectionLevel":"H"])
-        let ciImage: CIImage = qrEncoder.outputImage
-        var image = UIImage(CIImage: ciImage)
-
-        // Scale image without aliasing. Thanks, OOPer!
-
-        UIGraphicsBeginImageContext(CGSizeMake(200, 200));
-        let context = UIGraphicsGetCurrentContext();
-        CGContextSetInterpolationQuality(context, kCGInterpolationNone)
-        image!.drawInRect(CGRectMake(0, 0, 200, 200))
-        image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        return image
-    }
-
 }
 

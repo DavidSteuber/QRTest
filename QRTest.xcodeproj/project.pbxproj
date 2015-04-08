@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6356F8071AD526A200CC0BFD /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6356F8061AD526A200CC0BFD /* QRCode.swift */; };
 		63F413EA1AD0929E00E36523 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F413E91AD0929E00E36523 /* AppDelegate.swift */; };
 		63F413EC1AD0929E00E36523 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F413EB1AD0929E00E36523 /* ViewController.swift */; };
 		63F413EF1AD0929E00E36523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F413ED1AD0929E00E36523 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6356F8061AD526A200CC0BFD /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		63F413E41AD0929E00E36523 /* QRTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F413E81AD0929E00E36523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63F413E91AD0929E00E36523 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				63F413E91AD0929E00E36523 /* AppDelegate.swift */,
 				63F413EB1AD0929E00E36523 /* ViewController.swift */,
+				6356F8061AD526A200CC0BFD /* QRCode.swift */,
 				63F413ED1AD0929E00E36523 /* Main.storyboard */,
 				63F413F01AD0929E00E36523 /* Images.xcassets */,
 				63F413F21AD0929E00E36523 /* LaunchScreen.xib */,
@@ -214,6 +217,7 @@
 			files = (
 				63F413EC1AD0929E00E36523 /* ViewController.swift in Sources */,
 				63F413EA1AD0929E00E36523 /* AppDelegate.swift in Sources */,
+				6356F8071AD526A200CC0BFD /* QRCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +411,7 @@
 				63F414051AD0929E00E36523 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63F414061AD0929E00E36523 /* Build configuration list for PBXNativeTarget "QRTestTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				63F414081AD0929E00E36523 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
