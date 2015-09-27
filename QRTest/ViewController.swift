@@ -17,7 +17,7 @@ class ViewController: UITableViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         if let uiimage = image {
-            var code = UIImage.qrCodeWithMessage("https://www.david-steuber.com")
+            let code = UIImage.qrCodeWithMessage("https://www.david-steuber.com")
             uiimage.image = code?.scaleQRCodeWithNoInterpolation(200)
         }
     }
@@ -30,34 +30,34 @@ class ViewController: UITableViewController, UITextFieldDelegate {
     // MARK: UITextFieldDelegate Methods. All of them are optional.
 
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-        println("textFieldShouldBeginEditing called")
+        print("textFieldShouldBeginEditing called")
         return true
     }
 
     func textFieldDidBeginEditing(textField: UITextField) {
-        println("textFieldDidBeginEditing called")
+        print("textFieldDidBeginEditing called")
     }
 
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
-        println("textFieldShouldEndEditing called")
+        print("textFieldShouldEndEditing called")
         return true
     }
 
     func textFieldDidEndEditing(textField: UITextField) {
-        println("textFieldDidEndEditing called")
+        print("textFieldDidEndEditing called")
     }
 
     func textFieldShouldClear(textField: UITextField) -> Bool {
-        println("textFieldShouldClear called")
+        print("textFieldShouldClear called")
         textField.resignFirstResponder()
         return true
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        println("textFieldShouldReturn called")
+        print("textFieldShouldReturn called")
         if let text = textField.text {
-            println(text)
-            var code = UIImage.qrCodeWithMessage(text)
+            print(text)
+            let code = UIImage.qrCodeWithMessage(text)
             image.image = code?.scaleQRCodeWithNoInterpolation(200)
         }
         textField.resignFirstResponder()
